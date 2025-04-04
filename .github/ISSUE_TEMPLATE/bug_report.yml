@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         ¡Gracias por ayudarnos a mejorar CertUs! Por favor, completa las siguientes secciones para describir el error:
+
   - type: textarea
     id: descripcion
     attributes:
@@ -13,6 +14,7 @@ body:
       placeholder: "Al hacer clic aquí, ocurre lo siguiente..."
     validations:
       required: true
+
   - type: textarea
     id: pasos
     attributes:
@@ -23,16 +25,19 @@ body:
         3. Observar el error
     validations:
       required: true
+
   - type: textarea
     id: esperado
     attributes:
       label: "Comportamiento Esperado"
       placeholder: "Esperaba que ocurriera..."
+
   - type: textarea
     id: capturas
     attributes:
       label: "Capturas de Pantalla/Video (Opcional)"
       placeholder: "Adjunta capturas de pantalla o videos para ilustrar el problema."
+
   - type: dropdown
     id: asignacion
     attributes:
@@ -40,37 +45,43 @@ body:
       options:
         - "Sí, me gustaría ayudar."
         - "No, solo reporto el error."
+
   - type: markdown
     attributes:
-      summary: "Información del Dispositivo"
-      open: false
       value: |
+        ### Información del Dispositivo
         Por favor, proporciona la siguiente información sobre el dispositivo donde se produjo el error:
+
   - type: input
     id: so_escritorio
     attributes:
       label: "Sistema Operativo (Escritorio)"
       placeholder: "Ej: Windows 11, macOS Monterey"
+
   - type: input
     id: navegador_escritorio
     attributes:
       label: "Navegador (Escritorio)"
       placeholder: "Ej: Google Chrome, Mozilla Firefox, Safari"
+
   - type: input
     id: version_escritorio
     attributes:
       label: "Versión del Navegador (Escritorio)"
       placeholder: "Ej: 96.0.4664.110"
+
   - type: input
     id: so_movil
     attributes:
       label: "Sistema Operativo (Móvil)"
       placeholder: "Ej: iOS 15, Android 12"
+
   - type: input
     id: navegador_movil
     attributes:
       label: "Navegador (Móvil)"
       placeholder: "Ej: Safari, Chrome"
+
   - type: input
     id: version_movil
     attributes:
@@ -82,7 +93,9 @@ body:
     attributes:
       label: "Contexto Adicional (Opcional)"
       placeholder: "Agrega cualquier información adicional que consideres relevante."
+
   - type: markdown
     attributes:
       value: |
-        ¡Muchas gracias por tu reporte! Lo revisaremos a la brevedad. El equipo de CertUs te agradece tu colaboración.
+        ¡Muchas gracias por tu reporte! Lo revisaremos a la brevedad.  
+        El equipo de CertUs te agradece tu colaboración.
