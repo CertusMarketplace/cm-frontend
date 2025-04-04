@@ -40,7 +40,7 @@ body:
       options:
         - "Sí, me gustaría ayudar."
         - "No, solo reporto el error."
-  - type: details
+  - type: markdown
     attributes:
       summary: "Información del Dispositivo"
       open: false
