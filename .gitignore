@@ -1,0 +1,4 @@
+
+# Ocultando directorio de node_modules
+ ------------------------------------  
+src/main/resources/frontend-config/node_modules
