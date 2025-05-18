@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fuentes definidas */
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Righteous";
+    font-weight: 400;
+    font-style: normal;
+    src: url('fonts/righteous/Righteous-Regular.ttf') format('truetype');
+}
