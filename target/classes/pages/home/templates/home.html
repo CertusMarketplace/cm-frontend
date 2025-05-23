@@ -154,62 +154,14 @@
       </div>            
     </section>
 
-
     <!-- Olas -->
     <div class="relative">
       <svg class="absolute -mt-14 min-[596px]:-mt-20 lg:-mt-28 min-[1180px]:-mt-36 w-max" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0056A0" fill-opacity="1" d="M0,160L26.7,154.7C53.3,149,107,139,160,117.3C213.3,96,267,64,320,85.3C373.3,107,427,181,480,197.3C533.3,213,587,171,640,133.3C693.3,96,747,64,800,69.3C853.3,75,907,117,960,144C1013.3,171,1067,181,1120,160C1173.3,139,1227,85,1280,64C1333.3,43,1387,53,1413,58.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
     </div>
-
-    <footer class="bg-blueCertus w-full min-[410px]:mt-6 min-[760px]:mt-14 md:mt-20 xl:mt-32 2xl:mt-40 h-auto py-8 md:pt-0 md:pb-4 px-8 xl:px-36 2xl:px-60 min-[1670px]:pt-6 md:space-y-8 animate__animated">
-        <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-3 xl:grid-cols-4 xl:grid-rows-1 text-white gap-y-6 gap-x-4 animate__animated" data-animate="animate__fadeInLeft">
-          <div class="m-auto xl:m-0 space-y-10 col-span-2 md:col-span-3 xl:col-span-1">
-            <div class="flex justify-center space-x-2">
-               <a href="#">
-                <img th:src="@{/img/home/logo_certus.png}" class="h-14" alt="Logo Certus Marketplace">
-              </a>
-              <div>
-                <h5 class="font-righteous text-white text-3xl cssanimation danceTop">Marketplace</h5>
-                <h6 class="font-poppins text-base text-gray-300">Explora la creatividad</h6>
-              </div>
-            </div>
-            <p class="font-poppins text-center text-gray-300">El primer Marketplace para estudiantes creativos</p>
-          </div>
-          <div class="font-poppins mx-auto">
-            <ul class="flex flex-col space-y-3">
-              <h6 class="text-lg font-bold mb-3">Enlaces</h6>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Inicio</a>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Nosotros</a>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Soporte</a>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Instituto Certus</a>
-            </ul>
-          </div>
-          <div class="font-poppins mx-auto">
-            <ul class="flex flex-col space-y-3">
-              <h6 class="text-lg font-bold mb-3">Categorías</h6>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Pinturas</a>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Ilustraciones</a>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Música & Audio</a>
-              <a href="#" class="text-gray-300 hover:text-skyBlueCertus duration-200 transition hover:translate-x-4">Software</a>
-            </ul>
-          </div>
-          <div class="font-poppins space-y-4 mx-auto text-center my-5 md:my-0 col-span-2 md:col-span-1">
-            <h6 class="text-lg font-bold">Contáctanos a través de:</h6>
-            <div class="space-x-4">
-              <a href="#"><i class="fa-brands fa-facebook text-[24px] lg:text-[27px] hover:text-skyBlueCertus duration-200 hover:-translate-y-2"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter text-[24px] lg:text-[27px] hover:text-skyBlueCertus duration-200 hover:-translate-y-2"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram text-[24px] lg:text-[27px] hover:text-skyBlueCertus duration-200 hover:-translate-y-2"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin text-[24px] lg:text-[27px] hover:text-skyBlueCertus duration-200 hover:-translate-y-2"></i></a>
-            </div>            
-          </div>        
-        </div>  
-        <div class="w-full bg-gray-300 h-0.5 m-auto mb-5"></div>     
-        <div class="flex justify-center animate__animated" data-animate="animate__fadeInLeft">
-          <span class="text-gray-300 text-center font-poppins">
-            © 2025 Certus Marketplace. Todos los derechos reservados
-          </span>
-        </div>
-        
-    </footer>
     
+  
+    <!-- Footer -->
+
+    <header th:replace="~{home/templates/fragments/footer :: footer}"></header>
 </body>
 </html>

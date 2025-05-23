@@ -9,5 +9,4 @@ public class CertUsFrontendServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CertUsFrontendServiceApplication.class, args);
 	}
-
 }
