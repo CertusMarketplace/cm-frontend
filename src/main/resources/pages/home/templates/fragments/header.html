@@ -38,7 +38,7 @@
             <nav class="flex flex-col px-5 space-y-6 mt-8">
                 <ul class="space-y-2 font-medium">                   
                     <li>
-                        <a href="#" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
+                        <a th:href="@{/home}" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
                         <i class="fa-solid fa-house-chimney"></i>                      
                         <span class="flex-1 ms-3 whitespace-nowrap">Inicio</span>                        
                        </a>
@@ -50,13 +50,13 @@
                        </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
+                        <a th:href="@{/auth/login}" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
                             <i class="fa-solid fa-right-to-bracket"></i>
                             <span class="flex-1 ms-3 whitespace-nowrap">Iniciar</span>
                         </a>
                      </li>
                     <li>
-                       <a href="#" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
+                       <a th:href="@{/auth/register}" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
                             <i class="fa-solid fa-user-plus"></i>
                             <span class="flex-1 ms-3 whitespace-nowrap">Registrate</span>
                        </a>

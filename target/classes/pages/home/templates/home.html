@@ -18,12 +18,12 @@
 
       <div class="relative z-30 flex flex-col items-center justify-center py-6 px-6 md:py-14 space-y-4 md:space-y-8 text-center font-poppins">
         <div>
-          <h1 id="titleBanner" class="text-3xl text-white lg:text-4xl font-bold animate__animated" data-animate="animate__fadeInDown">
+          <h1 class="text-3xl text-white lg:text-4xl font-bold animate__animated" data-animate="animate__fadeInDown">
             Marketplace estudiantil para mentes creativas
           </h1>
         </div>
         <div>
-          <p id="descripBanner" class="text-base lg:text-lg text-white animate__animated" data-animate="animate__fadeInDown">
+          <p class="text-base lg:text-lg text-white animate__animated" data-animate="animate__fadeInDown">
             Compra y vende obras creativas directamente de estudiantes talentosos.
           </p>
         </div>
@@ -156,22 +156,27 @@
         <div class="flex flex-col text-center space-y-6 lg:order-2">
           <h2 class="text-xl lg:text-2xl font-extrabold leading-6 animate__animated" data-animate="animate__fadeInDown">¿Estás listo para ser Vendedor?</h2>
           <p class="animate__animated" data-animate="animate__fadeInDown">¿Eres estudiante de Certus?, Vente tus trabajos y monetiza rápidamente</p>
-          <a href="#" class="bg-blueCertus m-auto text-white xl:text-lg py-2 min-w-36 rounded-full hover:bg-skyBlueCertus duration-200 z-20 animate__animated" data-animate="animate__fadeInRight">Ser Vendedor</a>
+          <a th:href="@{/request-seller-role}" class="bg-blueCertus m-auto text-white xl:text-lg py-2 min-w-36 rounded-full hover:bg-skyBlueCertus duration-200 z-20 animate__animated" data-animate="animate__fadeInRight">Ser Vendedor</a>
         </div>
         <div class="m-auto relative lg:order-1 lg:ml-36">
           <img th:src="@{/img/home/caricatura_sales.svg}" class="h-52" alt="Caricatura Undraw">                    
         </div>        
       </div>            
-    </section>
-
-    <!-- Olas -->
-    <div class="relative">
-      <svg class="absolute -mt-14 min-[596px]:-mt-20 lg:-mt-28 min-[1180px]:-mt-36 w-max" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0056A0" fill-opacity="1" d="M0,160L26.7,154.7C53.3,149,107,139,160,117.3C213.3,96,267,64,320,85.3C373.3,107,427,181,480,197.3C533.3,213,587,171,640,133.3C693.3,96,747,64,800,69.3C853.3,75,907,117,960,144C1013.3,171,1067,181,1120,160C1173.3,139,1227,85,1280,64C1333.3,43,1387,53,1413,58.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
-    </div>
-    
+    </section>       
   
+    <!-- Olas -->
+
+    <div class="relative">
+      <svg class="absolute -mt-14 min-[596px]:-mt-20 lg:-mt-28 min-[1180px]:-mt-36 w-max"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0056A0" fill-opacity="1"
+          d="M0,160L26.7,154.7C53.3,149,107,139,160,117.3C213.3,96,267,64,320,85.3C373.3,107,427,181,480,197.3C533.3,213,587,171,640,133.3C693.3,96,747,64,800,69.3C853.3,75,907,117,960,144C1013.3,171,1067,181,1120,160C1173.3,139,1227,85,1280,64C1333.3,43,1387,53,1413,58.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+        </path>
+      </svg>
+    </div>
+
     <!-- Footer -->
 
-    <header th:replace="~{home/templates/fragments/footer :: footer}"></header>
+    <footer th:replace="~{home/templates/fragments/footer :: footer}"></footer>
 </body>
 </html>
