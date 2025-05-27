@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<th:block th:replace="~{fragments/head :: head}"></th:block>
+<body>
+    <!-- Header -->
+    <header th:replace="~{home/templates/fragments/header :: header}"></header>    
+
+    <section>
+        <div class="flex flex-col text-center font-poppins space-y-8 my-10 mx-6">
+            <div>
+                <h1 class="text-2xl font-extrabold">Convierte tu creatividad en Ganancias</h1>
+            </div>
+            <div class="text-base">
+                Si eres estudiante de Certus, únete a nuestro Marketplace y empieza a vender tus productos digitales
+                a un público muy amplio. ¡Transforma tu pasión en un negocio próspero!
+            </div>
+            <div class="flex mx-auto space-x-4 items-center justify-center">
+                <div class="h-20 w-20 rounded-full text-white flex flex-col items-center justify-center bg-skyBlueCertus">
+                    <i class="fa-solid fa-bullhorn text-[20px]"></i>
+                    <p>Anuncia</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right-long text-[20px]"></i>
+                </div>
+                <div class="h-20 w-20 rounded-full text-white flex flex-col items-center justify-center bg-purpleCertus">
+                    <i class="fa-solid fa-handshake-simple text-[20px]"></i>
+                    <p>Vende</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right-long text-[20px]"></i>
+                </div>
+                <div class="h-20 w-20 rounded-full text-white flex flex-col items-center justify-center bg-greenCertus">   
+                    <i class="fa-solid fa-hand-holding-dollar text-[20px]"></i>
+                    <p>Monetiza</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
