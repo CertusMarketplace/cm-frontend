@@ -15,11 +15,11 @@
     
             <!-- Links de navegación -->
              <ul class="font-poppins hidden min-[1100px]:flex items-center space-x-5">
-                <a href="#" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Inicio</a>
-                <a href="#" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Contacto</a>
-                <a href="#" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Iniciar</a>
-                <a href="#" class="xl:text-lg text-white bg-blueCertus hover:bg-skyBlueCertus duration-200 rounded-full py-2 px-6 animate__animated" data-animate="animate__headShake">Regístrate</a>
-                <a href="#" class="text-base xl:text-lg"><i class="fa-solid fa-store text-3xl text-blueCertus hover:text-skyBlueCertus duration-200"></i></a>
+                <a th:href="@{/home}" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Inicio</a>
+                <a th:href="@{/home}" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Contacto</a>
+                <a th:href="@{/auth/login}" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Iniciar</a>
+                <a th:href="@{/auth/register}" class="xl:text-lg text-white bg-blueCertus hover:bg-skyBlueCertus duration-200 rounded-full py-2 px-6 animate__animated" data-animate="animate__headShake">Regístrate</a>
+                <a th:href="@{/}" class="text-base xl:text-lg"><i class="fa-solid fa-store text-3xl text-blueCertus hover:text-skyBlueCertus duration-200"></i></a>
             </ul>
               
             <!-- Menú hamburguesa -->

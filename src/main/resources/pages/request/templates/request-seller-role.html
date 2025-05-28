@@ -6,46 +6,13 @@
 
     <header th:replace="~{home/templates/fragments/header :: header}"></header>    
 
-    <!-- Sección Initial Seller -->
-
-    <section>
-        <div class="flex flex-col text-center font-poppins space-y-8 my-10 mx-6">
-            <div>
-                <h1 class="text-2xl lg:text-3xl font-extrabold">Convierte tu creatividad en Ganancias</h1>
-            </div>
-            <div class="text-base">
-                Si eres estudiante de Certus, únete a nuestro Marketplace y empieza a vender tus productos digitales
-                a un público muy amplio.
-            </div>
-            <div class="flex space-x-2 md:space-x-6 items-center">
-                <div class="h-20 w-20 rounded-full text-white flex flex-col items-center justify-center bg-skyBlueCertus">
-                    <i class="fa-solid fa-bullhorn text-[20px]"></i>
-                    <p class="text-sm">Anuncia</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-arrow-right-long text-[20px]"></i>
-                </div>
-                <div class="h-20 w-20 rounded-full text-white flex flex-col items-center justify-center bg-purpleCertus">
-                    <i class="fa-solid fa-handshake-simple text-[20px]"></i>
-                    <p class="text-sm">Vende</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-arrow-right-long text-[20px]"></i>
-                </div>
-                <div class="h-20 w-20 rounded-full text-white flex flex-col items-center justify-center bg-greenCertus">   
-                    <i class="fa-solid fa-hand-holding-dollar text-[20px]"></i>
-                    <p class="text-sm">Monetiza</p>
-                </div>
-            </div>
-        </div>
-    </section>
     
     <!-- Form Request Seller Role -->
 
-    <section>
-        <form action="POST" class="font-poppins my-10 mb-24">
-            <h1 class="text-center text-2xl lg:text-3xl font-extrabold mb-8">Solicita ser Vendedor</h1>
-            <div class="flex flex-col mx-6 space-y-6">
+    <section class="pt-6 sm:pt-14 pb-20 sm:pb-48">
+        <form action="POST" class="font-poppins sm:border sm:shadow-xl sm:rounded-md mx-auto max-w-sm lg:max-w-md py-6">           
+            <div class="flex flex-col mx-6 space-y-6 text-sm">
+                <h1 class="text-start text-2xl font-extrabold">Solicita ser Vendedor</h1>
                 <div class="flex flex-col space-y-2">
                     <label for="name">Nombres Completos</label>
                     <input type="text" id="name" required class="border pl-2 border-gray-300 py-2 rounded-md">
@@ -74,22 +41,22 @@
                     <span> Acepto los<a href="#" class="text-blue-600"> Términos y Condiciones</a></span>
                 </div>
                 <div class="flex flex-col space-y-4">
-                    <a href="#" class="bg-blueCertus m-auto text-white text-center xl:text-lg py-2 min-w-36 rounded-full hover:bg-skyBlueCertus duration-200 z-20 animate__animated" data-animate="animate__fadeInRight">Enviar</a>
+                    <a href="#" class="bg-blueCertus text-white text-center xl:text-lg py-2 rounded-full hover:bg-skyBlueCertus duration-200 z-20">Enviar</a>
                     <span class="text-gray-400 text-sm">Recuerda que tienes que ser estudiante de Certus para solicitar el Rol Vendedor</span>
                 </div>
             </div>
-        </form>
+        </form>            
     </section>
 
     <!-- Olas -->
 
     <div class="relative">
-        <svg class="absolute -mt-14 min-[596px]:-mt-20 lg:-mt-28 min-[1180px]:-mt-36 w-max"
+      <svg class="absolute -mt-14 min-[596px]:-mt-20 lg:-mt-28 min-[1180px]:-mt-36 w-max"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#0056A0" fill-opacity="1"
-            d="M0,160L26.7,154.7C53.3,149,107,139,160,117.3C213.3,96,267,64,320,85.3C373.3,107,427,181,480,197.3C533.3,213,587,171,640,133.3C693.3,96,747,64,800,69.3C853.3,75,907,117,960,144C1013.3,171,1067,181,1120,160C1173.3,139,1227,85,1280,64C1333.3,43,1387,53,1413,58.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+          d="M0,160L26.7,154.7C53.3,149,107,139,160,117.3C213.3,96,267,64,320,85.3C373.3,107,427,181,480,197.3C533.3,213,587,171,640,133.3C693.3,96,747,64,800,69.3C853.3,75,907,117,960,144C1013.3,171,1067,181,1120,160C1173.3,139,1227,85,1280,64C1333.3,43,1387,53,1413,58.7L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
         </path>
-        </svg>
+      </svg>
     </div>
 
     <!-- Footer -->
