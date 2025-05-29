@@ -11,3 +11,9 @@ burger.addEventListener('click', () => {
 closeSidebar.addEventListener('click', () => {
     sidebar.classList.add('translate-x-full');
 });
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1100) {
+        sidebar.classList.add('translate-x-full');
+    }
+})

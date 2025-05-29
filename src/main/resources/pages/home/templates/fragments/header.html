@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymleaf.org" lang="es">
-     <header th:fragment="header">
+    <header th:fragment="header">
         <div class="flex items-center justify-between mx-6 my-3 sm:mx-16 xl:mx-36 2xl:mx-60 relative">
             <!-- Logo y Nombre -->
             <div class="flex items-center space-x-2">
-                <a href="#">
+                <a th:href="@{/home}">
                     <img th:src="@{/img/home/logo_certus.png}" class="h-14" alt="Logo"/>
                 </a>
                 <div>
@@ -14,12 +14,11 @@
             </div>
     
             <!-- Links de navegación -->
-             <ul class="font-poppins hidden min-[1100px]:flex items-center space-x-5">
-                <a th:href="@{/home}" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Inicio</a>
-                <a th:href="@{/home}" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Contacto</a>
-                <a th:href="@{/auth/login}" class="text-base xl:text-lg py-1 px-4 hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Iniciar</a>
-                <a th:href="@{/auth/register}" class="xl:text-lg text-white bg-blueCertus hover:bg-skyBlueCertus duration-200 rounded-full py-2 px-6 animate__animated" data-animate="animate__headShake">Regístrate</a>
-                <a th:href="@{/}" class="text-base xl:text-lg"><i class="fa-solid fa-store text-3xl text-blueCertus hover:text-skyBlueCertus duration-200"></i></a>
+             <ul class="font-poppins hidden min-[1100px]:flex items-center space-x-4">                                           
+                <a th:href="@{/auth/login}" class="text-base py-2 px-6 border border-gray-500 rounded-full hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Iniciar</a>
+                <a th:href="@{/auth/register}" class="text-base py-2 px-6 border border-gray-500 rounded-full hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus duration-100">Registrate</a>                
+                <a th:href="@{/request-seller-role}" class=" text-white bg-blueCertus hover:bg-skyBlueCertus duration-200 rounded-full py-2 px-6 animate__animated" data-animate="animate__headShake">Vender</a>
+                <a th:href="@{/}" class="text-base"><i class="fa-solid fa-store text-3xl text-blueCertus hover:text-skyBlueCertus duration-200"></i></a>
             </ul>
               
             <!-- Menú hamburguesa -->
@@ -42,26 +41,26 @@
                         <i class="fa-solid fa-house-chimney"></i>                      
                         <span class="flex-1 ms-3 whitespace-nowrap">Inicio</span>                        
                        </a>
-                    </li>                   
-                    <li>
-                        <a href="#" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
-                            <i class="fa-solid fa-headset"></i>                  
-                            <span class="flex-1 ms-3 whitespace-nowrap">Contácto</span>
-                       </a>
-                    </li>
+                    </li>                                    
                     <li>
                         <a th:href="@{/auth/login}" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
                             <i class="fa-solid fa-right-to-bracket"></i>
                             <span class="flex-1 ms-3 whitespace-nowrap">Iniciar</span>
                         </a>
-                     </li>
+                    </li>                  
                     <li>
                        <a th:href="@{/auth/register}" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
                             <i class="fa-solid fa-user-plus"></i>
                             <span class="flex-1 ms-3 whitespace-nowrap">Registrate</span>
                        </a>
-                    </li>     
-                     <li>
+                    </li>   
+                    <li>
+                        <a th:href="@{/request-seller-role}" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Vender</span>
+                        </a>
+                    </li>  
+                    <li>
                        <a href="#" class="flex items-center p-2 text-white hover:text-white hover:bg-skyBlueCertus duration-150 rounded-full group">
                             <i class="fa-solid fa-store"></i>
                             <span class="flex-1 ms-3 whitespace-nowrap">Marketplace</span>

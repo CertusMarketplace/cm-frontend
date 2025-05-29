@@ -4,7 +4,7 @@
 <body>
     <!-- Header -->
 
-    <header th:replace="~{home/templates/fragments/header :: header}"></header>    
+    <header th:replace="~{request/templates/fragments/header-seller :: header-seller}"></header>    
 
     
     <!-- Form Request Seller Role -->
@@ -12,7 +12,10 @@
     <section class="pt-6 sm:pt-14 pb-20 sm:pb-48">
         <form action="POST" class="font-poppins sm:border sm:shadow-xl sm:rounded-md mx-auto max-w-sm lg:max-w-md py-6">           
             <div class="flex flex-col mx-6 space-y-6 text-sm">
-                <h1 class="text-start text-2xl font-extrabold">Solicita ser Vendedor</h1>
+                <div class="space-y-3">
+                    <h1 class="text-start text-2xl font-extrabold">Solicita ser Vendedor</h1>
+                    <p class="text-sm">¿Estudiante de Certus?, Vende y genera ingresos😊</p>
+                </div>
                 <div class="flex flex-col space-y-2">
                     <label for="name">Nombres Completos</label>
                     <input type="text" id="name" required class="border pl-2 border-gray-300 py-2 rounded-md">
