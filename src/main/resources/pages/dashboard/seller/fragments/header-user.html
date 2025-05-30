@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <header th:fragment="header-user">
+        <!-- Burguer Sidebar -->      
+        <div class="sm:ml-72 flex font-poppins justify-between py-2 px-6 lg:px-12">
+            <div class="flex sm:hidden">
+                <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="items-center text-blueCertus sm:hidden hover:text-skyBlueCertus hover:rounded-full py-1.5 px-2 hover:border-b-2 hover:border-skyBlueCertus">
+                   <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Nav User -->
+            <div class="flex justify-center items-center space-x-2">              
+                <div class="hidden lg:flex lg:flex-col">
+                    <h3 class="text-xl">Buenos días Geraldillo!</h3>
+                    <span class="text-base text-gray-500">¿Que tienes pensado hoy?</span>
+                </div>
+            </div>
+            <nav class="flex items-center justify-center lg:space-x-3">
+                <button class="lg:border border-gray-600 rounded-full flex justify-center items-center h-10 w-10 lg:w-32 duration-100 lg:space-x-1 lg:py-2 lg:px-6 text-blueCertus hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus">
+                    <i class="fa-solid fa-plus text-2xl"></i>
+                    <span class="hidden lg:flex">Publicar</span>
+                </button>
+                <button class="lg:border border-blueCertus rounded-full flex justify-center items-center h-10 w-10 lg:w-40 duration-100 lg:space-x-1 lg:py-2 lg:px-6 text-blueCertus lg:text-white lg:bg-blueCertus hover:bg-skyBlueCertus hover:border-skyBlueCertus">
+                    <i class="fa-solid fa-store text-xl"></i>
+                    <span class="hidden lg:flex">Marketplace</span>
+                </button>
+                <a class="pl-2" href="#">
+                    <img class="h-[45px] lg:h-[68px]" th:src="@{/img/dashboard/seller/user.svg}" alt="User">
+                </a>
+            </nav>
+        </div>
+      
+      
+    </header>
+</html>

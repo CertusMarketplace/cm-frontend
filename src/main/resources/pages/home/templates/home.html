@@ -28,12 +28,16 @@
           </p>
         </div>
         <div class="space-x-2">
-          <button class="rounded-full text-black xl:text-lg min-w-36 lg:min-w-40 py-2 bg-white hover:bg-skyBlueCertus hover:text-white duration-200 animate__animated" data-animate="animate__fadeInLeft">
-            Iniciar
-          </button>
-          <button class="rounded-full text-white xl:text-lg min-w-36 py-2 bg-blueCertus hover:bg-skyBlueCertus duration-200 animate__animated" data-animate="animate__fadeInRight">
-            Marketplace
-          </button>
+          <a th:href="@{/auth/login}">
+            <button th:src="@{/home}" class="rounded-full text-black xl:text-lg min-w-36 lg:min-w-40 py-2 bg-white hover:bg-skyBlueCertus hover:text-white duration-200 animate__animated" data-animate="animate__fadeInLeft">
+              Iniciar
+            </button>
+          </a>
+          <a th:href="@{/}">
+            <button class="rounded-full text-white xl:text-lg min-w-36 py-2 bg-blueCertus hover:bg-skyBlueCertus duration-200 animate__animated" data-animate="animate__fadeInRight">
+              Marketplace
+            </button>
+          </a>
         </div>
       </div>
     </section>

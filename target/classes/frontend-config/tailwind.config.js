@@ -2,6 +2,8 @@
 module.exports = {
   content: [
    "../pages/**/templates/**/*.html",  
+   "../pages/**/fragments/**/*.html",
+
   ],
   theme: {
     extend: {
@@ -19,5 +21,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

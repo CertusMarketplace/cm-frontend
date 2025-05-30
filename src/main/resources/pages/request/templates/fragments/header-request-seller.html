@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymleaf.org" lang="es"> 
-    <header th:fragment="header-seller">
+<html xmlns="http://www.w3.org/1999/xhtml">
+     <header th:fragment="header-request-seller">
         <div class="flex items-center justify-between mx-6 my-3 sm:mx-16 xl:mx-36 2xl:mx-60 relative">
             <!-- Logo y Nombre -->
             <div class="flex items-center space-x-2">
@@ -21,7 +21,7 @@
             </ul>
               
             <!-- Menú hamburguesa -->
-            <span class="burguer min-[1100px]:hidden cursor-pointer">
+            <span id="burguer" class="min-[1100px]:hidden cursor-pointer">
                 <i class="fa-solid fa-bars-staggered text-3xl text-blueCertus hover:text-skyBlueCertus duration-200"></i>
             </span>
         </div>
