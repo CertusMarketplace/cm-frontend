@@ -5,10 +5,6 @@ public interface ForSellerDashboard {
     /* ==================================
           SELLER DASHBOARD ENDPOINTS
      ================================== */
-    String showSellersWorkDashboard();
-
-    String showWorksUnderReviewDashboard();
-
-    //String showSellersSalesDashboard();
+    String showSellerDashboard();
 
 }

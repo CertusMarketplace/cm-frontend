@@ -9,15 +9,10 @@ import pe.edu.certus.ui.pages.dashboard.seller.ports.driver.ForSellerDashboard;
 @RequestMapping(SellerDashboardRoute.SELLER_DASHBOARD_ROUTE)
 public class SellerDashboardAdapter implements ForSellerDashboard {
 
-    @GetMapping(SellerDashboardRoute.SELLER_WORK_DASHBOARD_ROUTE)
+    @GetMapping
     @Override
-    public String showSellersWorkDashboard( ) {
-        return SellerDashboardRoute.SELLER_WORK_DASHBOARD_FILE;
+    public String showSellerDashboard( ) {
+        return SellerDashboardRoute.SELLER_DASHBOARD_FILE;
     }
 
-    @GetMapping(SellerDashboardRoute.SELLER_WORKS_UNDER_REVIEW_ROUTE)
-    @Override
-    public String showWorksUnderReviewDashboard( ) {
-        return SellerDashboardRoute.SELLER_WORKS_UNDER_REVIEW_FILE;
-    }
 }
