@@ -15,4 +15,20 @@ public class SellerDashboardAdapter implements ForSellerDashboard {
         return SellerDashboardRoute.SELLER_DASHBOARD_FILE;
     }
 
+    @GetMapping("/fragments/seller-works")
+    public String loadWorkString() {
+        return SellerDashboardRoute.SELLER_WORKS_FRAGMENT + " :: content";
+    }
+    
+    @GetMapping("/fragments/seller-works-under-review")
+    public String loadSellerWorksUnderReview() {
+        return SellerDashboardRoute.SELLER_WORKS_UNDER_REVIEW_FRAGMENT + " :: content";
+    }
+
+    @GetMapping("/fragments/seller-sales")
+    public String loadSales() {
+        return SellerDashboardRoute.SELLER_SALES_FRAGMENT + " :: content";
+    }
+
 }
+

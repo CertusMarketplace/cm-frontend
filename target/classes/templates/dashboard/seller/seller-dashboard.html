@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<th:block th:replace="~{/fragments/head :: head}"></th:block>
+<body>
+
+    <!-- Header Seller Dashboard -->
+
+    <header th:replace="~{/dashboard/seller/fragments/header-seller :: header-seller}"></header>
+
+    <!-- Sidenbar Seller -->
+    
+    <section th:replace="~{/dashboard/seller/fragments/sidebar :: sidebar}"></section>
+
+    <!-- Contenido Según Filtro -->
+
+    <main id="all-content">
+
+        <!-- Mis Publicaciones -->
+
+        <section th:replace="~{/dashboard/seller/fragments/seller-works :: content}"></section>
+
+    </main>
+
+  
+</body>
+</html>

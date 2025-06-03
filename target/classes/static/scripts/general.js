@@ -1,6 +1,5 @@
 // Función Header
 
-
 function headerHome() {
     
     const burguer = document.getElementById('burguer');
@@ -28,29 +27,37 @@ function headerHome() {
 
 headerHome();
 
-// Active Sidebar Clase Link
+// Función Contenido de Dashboard
 
-function activeLinkSidebar () { 
-
-    if ( activePublication ) {
-        
-        const activePublication = document.getElementById('activePublication');
-
-        activePublication.classList.add('bg-skyBlueCertus')
-        activePublication.classList.add('text-white')
-
-        activePublication.addEventListener('mouseover', () => {
-            activePublication.classList.remove('hover:bg-skyBlueCertus')
-        })
-
-    }  
+function loadView(view) {
+    fetch(`/marketplace/dashboard/seller/fragments/${view}`)
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("all-content").innerHTML = html;
+    })
 }
 
-activeLinkSidebar();
+// Función Estado de Filtro Sidebar
 
+function setActiveSidebarLink(activeId) {
+    const links = ['stateLinkWork', 'stateLinkReview', 'stateLinkSales', 'stateLinkSettings', 'stateLinkAccount', 'stateLinkLogout'];
+    links.forEach(id => {
+        const element = document.getElementById(id);
+        if (!element) return;
+        if (id === activeId) {
+            element.classList.add('bg-skyBlueCertus');
+            element.classList.remove('hover:bg-blue-900');
+        } else {
+            element.classList.remove('bg-skyBlueCertus');
+            element.classList.add('hover:bg-blue-900');
+        }
+    });
+}
 
+['stateLinkWork', 'stateLinkReview', 'stateLinkSales', 'stateLinkSettings', 'stateLinkAccount', 'stateLinkLogout'].forEach(id => {
+    const element = document.getElementById(id);
+    if (!element) return;
+    element.addEventListener('click', () => setActiveSidebarLink(id));
+});
 
-
-
-
-
+setActiveSidebarLink('stateLinkWork');
