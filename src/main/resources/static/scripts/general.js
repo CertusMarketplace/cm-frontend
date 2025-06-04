@@ -61,3 +61,23 @@ function setActiveSidebarLink(activeId) {
 });
 
 setActiveSidebarLink('stateLinkWork');
+
+// Función Saludo
+
+function greetingExpression () {
+
+    const date = new Date();
+    const hour = date.getHours();
+    const greeting = document.getElementById('greeting');
+
+    if ( hour >= 6 && hour < 12 ) {
+        greeting.textContent = 'Buenos días ';
+    } else if ( hour >= 12 && hour < 18 ) {
+        greeting.textContent = 'Buenas tardes ';
+    } else {
+        greeting.textContent = 'Buenas noches ';
+    }
+
+}
+
+greetingExpression();

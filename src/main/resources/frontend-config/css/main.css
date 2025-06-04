@@ -1030,10 +1030,6 @@ input[type="range"]::-ms-fill-lower {
   margin-left: 1rem;
 }
 
-.ml-80 {
-  margin-left: 20rem;
-}
-
 .ms-3 {
   margin-inline-start: 0.75rem;
 }
