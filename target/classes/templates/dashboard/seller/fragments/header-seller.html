@@ -3,7 +3,7 @@
 
     <header th:fragment="header-seller">
         <!-- Burguer Sidebar -->      
-        <div class="sm:ml-72 flex font-poppins justify-between py-2 px-6 lg:px-12">
+        <div class="flex font-poppins justify-between py-2 px-6">
             <div class="flex sm:hidden">
                 <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="items-center text-blueCertus sm:hidden hover:text-skyBlueCertus hover:rounded-full py-1.5 px-2 hover:border-b-2 hover:border-skyBlueCertus">
                    <i class="fa-solid fa-bars text-2xl"></i>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <nav class="flex items-center justify-center lg:space-x-3">
-                <button class="lg:border border-gray-600 rounded-full flex justify-center items-center h-10 w-10 lg:w-32 duration-100 lg:space-x-1 lg:py-2 lg:px-6 text-blueCertus hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus">
+                <button onclick="document.getElementById('modalAddWork').showModal()" class="lg:border border-gray-600 rounded-full flex justify-center items-center h-10 w-10 lg:w-32 duration-100 lg:space-x-1 lg:py-2 lg:px-6 text-blueCertus hover:text-skyBlueCertus hover:border-b-2 hover:border-skyBlueCertus">
                     <i class="fa-solid fa-plus text-2xl"></i>
                     <span class="hidden lg:flex">Publicar</span>
                 </button>
