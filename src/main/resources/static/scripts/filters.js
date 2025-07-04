@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `<i class="fas fa-star ${i < product.popularity ? 'text-gray-900' : 'text-gray-300'}"></i>`
         ).join('');
 
-        const detailUrl = `./work-details.html?id=${product.id}`;
+        const detailUrl = ` /marketplace/works/workId`;
 
         return `
             <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
