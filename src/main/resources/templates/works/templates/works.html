@@ -1,14 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<th:block th:replace="~{fragments/head :: head}"></th:block>
-<body class="h-screen w-screen m-0 p-0">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora</title>
 
-<div class="min-h-screen w-full bg-cover bg-center flex items-center justify-center px-4 py-8"
-     th:style="'background-image: url(' + @{/img/login/fondo.jpg} + ')'">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="bg-gray-100">
 
 
+<div class="flex flex-col lg:flex-row min-h-screen px-4 lg:px-12">
+    <aside class="w-full lg:w-72 bg-white p-6 shadow-lg lg:flex-shrink-0">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Filtros</h2>
 
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3 text-gray-700">Categoría</h3>
+            <div class="space-y-2" id="category-filters">
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="category" value="todos" class="form-radio text-blue-500 h-4 w-4" checked>
+                    <span class="ml-2">Todos</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="category" value="cursos" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">Cursos</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="category" value="ilustraciones" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">Ilustraciones Digitales</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="category" value="musica" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">Música y Audio</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="category" value="software" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">Software</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3 text-gray-700">Precio</h3>
+            <div class="space-y-2" id="price-filters">
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="all" class="form-radio text-blue-500 h-4 w-4" checked>
+                    <span class="ml-2">Todos</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="0-50" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">Hasta S/50</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="50-100" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">S/50 - S/100</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="100-250" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">S/100 - S/250</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="250-500" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">S/250 - S/500</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="500-1000" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">S/500 - S/1000</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="1000-2000" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">S/1000 - S/2000</span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="price" value="2000-plus" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2">Más de S/2000</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-3 text-gray-700">Popularidad</h3>
+            <div class="space-y-2" id="popularity-filters">
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="popularity" value="all" class="form-radio text-blue-500 h-4 w-4" checked>
+                    <span class="ml-2 flex items-center">
+                            <i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i>
+                            <span class="ml-1">Todos</span>
+                        </span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="popularity" value="5" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2 flex items-center">
+                            <i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i>
+                        </span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="popularity" value="4" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2 flex items-center">
+                            <i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i>
+                        </span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="popularity" value="3" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2 flex items-center">
+                            <i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i>
+                        </span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="popularity" value="2" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2 flex items-center">
+                            <i class="fas fa-star text-gray-900"></i><i class="fas fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i>
+                        </span>
+                </label>
+                <label class="flex items-center text-gray-600 cursor-pointer hover:text-[#00205b] transition duration-200">
+                    <input type="radio" name="popularity" value="1" class="form-radio text-blue-500 h-4 w-4">
+                    <span class="ml-2 flex items-center">
+                            <i class="fas fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i><i class="far fa-star text-gray-900"></i>
+                        </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="mt-8 flex justify-between">
+            <button id="clear-filters" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition duration-200">Limpiar</button>
+            <button id="apply-filters" class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-200">Aplicar</button>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-6">
+        <div id="dynamic-banner" class="relative w-full h-64 bg-cover bg-center rounded-lg shadow-md mb-8 flex items-center justify-between p-8 text-white" style="background-image: url('./assets/banners/banner-todos.png'); background-color: #2a3a8e;">
+            <div class="relative z-10">
+                <h1 id="banner-title" class="text-4xl font-bold mb-2">Todos los Productos</h1>
+                <p id="banner-description" class="text-xl">Explora todas nuestras soluciones digitales disponibles.</p>
+            </div>
+            <div class="absolute inset-0  rounded-lg opacity-90"></div>
+        </div>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-cards-container">
+        </section>
+
+        <div class="flex justify-center items-center mt-8 space-x-2" id="pagination-container">
+        </div>
+    </main>
 </div>
+
+
+<script th:src="@{/scripts/filters.js}"></script>
 
 </body>
 </html>
