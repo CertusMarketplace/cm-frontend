@@ -9,36 +9,54 @@
                 <p class="text-base lg:text-lg text-gray-500">Publica un trabajo desde el boton de "Publicar", espera la aprobación y listo.</p>
             </div>
 
-            <!-- Contenido con Trabajo-->
-            <div class="my-6 space-y-4">
+            <!-- Title -->
+
+            <div class="mt-6 mb-4">
                 <h1 class="text-2xl font-bold">Trabajos Publicados</h1>
-                <div class="bg-white max-w-xs p-3 space-y-2">
-                    <div>
-                        <img th:src="@{/img/dashboard/seller/img-work.png}" alt="Trabajo">
+            </div>
+
+            <!-- Contenido con Trabajo-->
+
+            <div class="flex space-x-4">
+                
+                <!-- Work 1 -->
+
+                <div class="max-w-xs p-3 space-y-2 border-2 rounded-md">
+                    <div class="flex justify-center">
+                        <img th:src="@{/img/dashboard/seller/img-work-1.png}" class="max-h-48 max-w-96 rounded-lg" alt="Trabajo">
                     </div>
                     <div class="text-sm space-y-1.5">
                         <h5><strong>Trabajo:</strong> Arctic Monkeys</h5>
                         <p><strong>Descripción:</strong> Mi Creatividad destaca la elegancia de un tipo de flor originada en Perú, una ilustración pura y...</p>
-                        <p><strong>Cateogoría:</strong> Ilustración Digital</p>
+                        <p class="text-green-600"><strong>Cateogoría:</strong> Ilustración Digital</p>
                         <p><strong>Precio:</strong> S/700.00</p>
                     </div>
-                    <div class="flex space-x-2">
+                    <div class="flex space-x-1">
                         <button onclick="document.getElementById('modalEditWork').showModal()" class="rounded-full text-white text-sm w-full py-1.5 bg-greenCertus">Editar</button>
-                        <button class="rounded-full text-white text-sm w-full py-1.5 bg-redCertus">Eliminar</button>
-                    </div>                   
-                </div>
-            </div>
-        </div>
+                        <button onclick="document.getElementById('modalUserRequestWork').showModal()" class="rounded-full text-white text-sm w-full py-1.5 bg-blueCertus">Solicitudes</button>
+                        <button onclick="document.getElementById('modalDeleteWork').showModal()" class="rounded-full text-white text-sm w-full py-1.5 bg-redCertus">Eliminar</button>
+                    </div>      
+                    
+                    <!-- Modal Delet Work-->
 
-        <!-- Los modales creados en componentes individuales -->
+                    <section th:replace="~{/dashboard/seller/fragments/seller-works/modal-delete-work :: modal-delete-work}"></section>
+
+                    <!-- Modal User Request Work -->
+
+                    <section th:replace="~{/dashboard/seller/fragments/seller-works/modal-user-request-work :: modal-user-request-work}"></section>
+
+                </div>
+
+                <!-- Work 2  -->
+                
+
+                <!-- Work 3 -->
+    
+            </div>
         
             <!-- Modal: Edit Work -->
 
             <section th:replace="~{/dashboard/seller/fragments/seller-works/modal-edit-work :: modal-edit-work}"></section>
-
-            <!-- Modal: Publicar Trabajo -->
-
-            <section th:replace="~{/dashboard/seller/fragments/seller-works/modal-add-work :: modal-add-work}"></section>
         
     </section>
 </html>
