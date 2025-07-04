@@ -171,9 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (product.price < min || product.price > max) return false;
             }
             if (filters.popularity !== 'all') {
-                const minPopularity = parseInt(filters.popularity);
-                if (isNaN(minPopularity) || product.popularity < minPopularity) return false;
+            const selectedPopularity = parseInt(filters.popularity);
+            if (product.popularity !== selectedPopularity) { 
+                return false;
             }
+        }
             return true;
         });
     }
