@@ -68,15 +68,15 @@
                         </div>
                     </div>
 
-                    <button type="submit"
-                            class="w-full bg-blue-950 text-white py-2 rounded-md mb-4 hover:bg-blue-920 flex items-center justify-center gap-2 font-poppins">
+                    <a th:href="@{/auth/login}"
+                       class="w-full bg-blue-950 text-white py-2 rounded-md mb-4 hover:bg-blue-920 flex items-center justify-center gap-2 font-poppins">
                         Registrarse
-                    </button>
+                    </a>
                 </form>
 
                 <p class="font-poppins mt-4 text-sm text-center text-gray-600">
                     ¿Ya tienes una cuenta?
-                    <a href="#" class="text-blue-700 font-semibold hover:underline">Inicia sesión aquí</a>
+                    <a th:href="@{/auth/login}" class="text-blue-700 font-semibold hover:underline">Inicia sesión aquí</a>
                 </p>
             </div>
         </div>
